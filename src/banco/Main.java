@@ -23,6 +23,12 @@ public class Main {
 		Connection con;
 		try {
 			con = conexao.getConnection();
+			if (con != null) {
+				System.out
+						.println("You made it, take control your database now!");
+			} else {
+				System.out.println("Failed to make connection!");
+			}
 			con.setAutoCommit(false);
 
 			PreparedStatement st = con
@@ -50,7 +56,7 @@ public class Main {
 
 		}
 
-		System.out.println("Conexão Beleza");
+		System.out.println("Conexï¿½o Beleza");
 
 		for (String string : produtos) {
 
